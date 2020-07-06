@@ -11,86 +11,6 @@
 	}
 	</style>
 
-  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-  <script>
-    var cont=0;
-function loopSlider(){
-  var xx= setInterval(function(){
-        switch(cont)
-        {
-        case 0:{
-            $("#slider-1").fadeOut(400);
-            $("#slider-2").delay(400).fadeIn(400);
-            $("#sButton1").removeClass("bg-purple-800");
-            $("#sButton2").addClass("bg-purple-800");
-        cont=1;
-        
-        break;
-        }
-        case 1:
-        {
-        
-            $("#slider-2").fadeOut(400);
-            $("#slider-1").delay(400).fadeIn(400);
-            $("#sButton2").removeClass("bg-purple-800");
-            $("#sButton1").addClass("bg-purple-800");
-           
-        cont=0;
-        
-        break;
-        }
-        
-        
-        }},8000);
-
-}
-
-function reinitLoop(time){
-clearInterval(xx);
-setTimeout(loopSlider(),time);
-}
-
-
-
-function sliderButton1(){
-
-    $("#slider-2").fadeOut(400);
-    $("#slider-1").delay(400).fadeIn(400);
-    $("#sButton2").removeClass("bg-purple-800");
-    $("#sButton1").addClass("bg-purple-800");
-    reinitLoop(4000);
-    cont=0
-    
-    }
-    
-    function sliderButton2(){
-    $("#slider-1").fadeOut(400);
-    $("#slider-2").delay(400).fadeIn(400);
-    $("#sButton1").removeClass("bg-purple-800");
-    $("#sButton2").addClass("bg-purple-800");
-    reinitLoop(4000);
-    cont=1
-    
-    }
-
-    $(window).ready(function(){
-        $("#slider-2").hide();
-        $("#sButton1").addClass("bg-purple-800");
-        
-
-        loopSlider();
-     
-        
-    
-    
-    
-    
-    });
-
-  
-  </script>
-
-    
 </head>
 <body>
 <!-- 
@@ -146,18 +66,43 @@ header
 
   </div>
 </header>
-<br><br>
-<!--content-->
-<h2 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900" align="center">LET ME BE AS I WANT TO</h2>
-<br>
-<!-- <h1 ></h1><br> -->
-<div class="container">
-  
-</div>
 
-<p class="title-font sm:text-2xl text-1xl mb-4 font-medium text-gray-800" align="center">
+<hr>
 
+<div class="max-w-screen-xl mx-auto">
     
+    <!-- header ends here -->
+
+    <main class="mt-10">
+
+      <div class="mb-4 md:mb-0 w-full max-w-screen-md mx-auto relative" style="height: 24em;">
+        <div class="absolute left-0 bottom-0 w-full h-full z-10"
+          style="background-image: linear-gradient(180deg,transparent,rgba(0,0,0,.7));"></div>
+        <img src=https://source.unsplash.com/1600x800/?freedom />
+        <div class="p-4 absolute bottom-0 left-0 z-20">
+          <!-- <a href="#"
+            class="px-4 py-1 bg-black text-gray-200 inline-flex items-center justify-center mb-2">Nutrition</a> -->
+          <h2 class="text-4xl font-semibold text-gray-100 leading-tight">
+            LET ME BE AS I WANT TO
+          </h2>
+          <div class="flex mt-3">
+            <img src="https://source.unsplash.com/10x10/?cartoon,person"
+              class="h-10 w-10 rounded-full mr-2 object-cover" />
+            <div>
+              <p class="font-semibold text-gray-200 text-sm"> Nishi Bhate </p>
+              <p class="font-semibold text-gray-400 text-xs"> 22 Feb </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="px-4 lg:px-0 mt-12 text-gray-700 max-w-screen-md mx-auto text-lg leading-relaxed">
+        
+
+        <h2 style="text-align: center;" class="text-2xl text-gray-800 font-semibold mb-4 mt-4">LET ME BE AS I WANT TO</h2>
+
+        <p class="pb-6" style="text-align: center;">
+              
    I can get betrayed, but I cannot betray,<br>
    He can drink and get me deserted, but I cannot drink,<br>
    He can use coarse words, but if I use it’s scurrility,<br>
@@ -215,17 +160,18 @@ header
    Letting me live as you desire.<br>
    I am phenomenal and I will be phenomenal<br>
    I WILL BE AS I WANT TO.<br>
-</p>
 
 
+        </p>
 
+      </div>
+    </main>
+    <!-- main ends here -->
+  </div>
 
-
-
-
-
-
-<!-- footer-->
+<!-- 
+footer
+ -->
 <footer class="text-gray-700 body-font">
   <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
     <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
@@ -256,8 +202,6 @@ header
       </a>
     </span>
   </div>
-
-  <br><br>
 </footer>
 
 </body>

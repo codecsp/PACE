@@ -3,8 +3,7 @@
 <head>
 	<title>PACE</title>
 	<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-  <style>
+	<style>
 		
 	.dropdown:hover .dropdown-menu
 	{
@@ -12,87 +11,6 @@
 	}
 	</style>
 
-  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-  <script>
-
-    var cont=0;
-function loopSlider(){
-  var xx= setInterval(function(){
-        switch(cont)
-        {
-        case 0:{
-            $("#slider-1").fadeOut(400);
-            $("#slider-2").delay(400).fadeIn(400);
-            $("#sButton1").removeClass("bg-purple-800");
-            $("#sButton2").addClass("bg-purple-800");
-        cont=1;
-        
-        break;
-        }
-        case 1:
-        {
-        
-            $("#slider-2").fadeOut(400);
-            $("#slider-1").delay(400).fadeIn(400);
-            $("#sButton2").removeClass("bg-purple-800");
-            $("#sButton1").addClass("bg-purple-800");
-           
-        cont=0;
-        
-        break;
-        }
-        
-        
-        }},8000);
-
-}
-
-function reinitLoop(time){
-clearInterval(xx);
-setTimeout(loopSlider(),time);
-}
-
-
-
-function sliderButton1(){
-
-    $("#slider-2").fadeOut(400);
-    $("#slider-1").delay(400).fadeIn(400);
-    $("#sButton2").removeClass("bg-purple-800");
-    $("#sButton1").addClass("bg-purple-800");
-    reinitLoop(4000);
-    cont=0
-    
-    }
-    
-    function sliderButton2(){
-    $("#slider-1").fadeOut(400);
-    $("#slider-2").delay(400).fadeIn(400);
-    $("#sButton1").removeClass("bg-purple-800");
-    $("#sButton2").addClass("bg-purple-800");
-    reinitLoop(4000);
-    cont=1
-    
-    }
-
-    $(window).ready(function(){
-        $("#slider-2").hide();
-        $("#sButton1").addClass("bg-purple-800");
-        
-
-        loopSlider();
-     
-        
-    
-    
-    
-    
-    });
-
-  
-  </script>
-
-    
 </head>
 <body>
 <!-- 
@@ -149,20 +67,42 @@ header
   </div>
 </header>
 
+<hr>
 
-
-<h2 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900" align="center">माणूसकीच हरवत चाललयं.</h2>
-<div class="blog-post">
-  
-
-<main>
-<div class="container">
-
-  <div class="blog-post">
-    <!-- <h2 class="blog-post-title" align="center">ONE LAST TIME.</h2> -->
+<div class="max-w-screen-xl mx-auto">
     
-    <hr>
-    <p style=" text-indent: 50px; font-size:16px;" > 
+    <!-- header ends here -->
+
+    <main class="mt-10">
+
+      <div class="mb-4 md:mb-0 w-full max-w-screen-md mx-auto relative" style="height: 24em;">
+        <div class="absolute left-0 bottom-0 w-full h-full z-10"
+          style="background-image: linear-gradient(180deg,transparent,rgba(0,0,0,.7));"></div>
+        <img src=https://source.unsplash.com/1600x800/?humanity />
+        <div class="p-4 absolute bottom-0 left-0 z-20">
+          <!-- <a href="#"
+            class="px-4 py-1 bg-black text-gray-200 inline-flex items-center justify-center mb-2">Nutrition</a> -->
+          <h2 class="text-4xl font-semibold text-gray-100 leading-tight">
+            माणूसकीच हरवत चाललयं.
+          </h2>
+          <div class="flex mt-3">
+            <img src="https://source.unsplash.com/10x10/?cartoon,person"
+              class="h-10 w-10 rounded-full mr-2 object-cover" />
+            <div>
+              <p class="font-semibold text-gray-200 text-sm"> Mayuri Gaikwad </p>
+              <p class="font-semibold text-gray-400 text-xs"> 23 Feb </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="px-4 lg:px-0 mt-12 text-gray-700 max-w-screen-md mx-auto text-lg leading-relaxed">
+        
+
+        <h2 style="text-align: center;" class="text-2xl text-gray-800 font-semibold mb-4 mt-4">माणूसकीच हरवत चाललयं.</h2>
+
+        <!-- <p class="pb-6" style="text-align: center;"> -->
+        <p style=" text-indent: 50px; font-size:16px;" > 
       आजच मानवी जीवन यांच्या सुसाट त्याने धावत चाललंय, आशा-अपेक्षांच्या या रातीत कुठेतरी माणूसकीच हरवत चाललीयं. आज माणसाला माणसाशीच बोलण्यासाठी वेळ मिळत नाही, आपल्याला घरा शेजारी कोण राहते हे त्याला माहित नाही हातातला काळ एवढ्या झपाट्याने बदलतोय,तेवढयाच झपाट्याने माणूस बोलतो, म्हणून कधी कधी ते बदलत विज्ञान धान की वरदान' असा प्रश्न पडतो. 
       जसाजसा पैसा मोठा होतो तसानसा माणूसही बदलतो, प्रोट्घा प्रतिज्हे साठी, आज संवेदनांनाही मर बाजारात गिलाम करतोय
     </p>
@@ -194,21 +134,27 @@ header
     <p style=" text-indent: 50px; font-size:16px;" >
       
       आता सगळ जग ग्लोबल झालं जगण्याल्याही वेगल वळण आलय, सगळीकडे चालू आहे ती तुफान स्पर्धा, यांना तो संपला या गलतयाल माणूस मात्र हरवला. पैशाच्या मोहासाठी नातेसंबंधही विसरला.
-      <br>
+      <br><br>
       </p>
-      <p>
+      <p style="text-align: center;">
       <b>
         
         " पैशाची जादू लई न्यारी, तान्ह्या पोराला त्याची हाव.<br>
           आई सोइन घेत झेप पैशाच्या मारून द्या..<br>
           जन्मापासून सारी माणसं या पैशाची गुलाम रे.<br>
           दाम करी काम वेड्या दाम करी काम..."<br>
+    
+          <br>
       </b>
     </p>
     <p style=" text-indent: 50px; font-size:18px;" >
       
         या काव्यपवलीत सरोवस्व अगदी अनूक वर्णन केल डाहे से माणसाच्या व समाजाच्या स्वभाव गुण. आज काळाच्या धान कुठेतरी संस्कार हरवलेत, घडण्याच्या कात्यावर चालणार्या जीवनशैलीने माणसाकइन मनमुरादपणे, आणि मोकळेपणाने जगणेच हिरावले अमर्यादित मिळविण्याच्या शर्यत, मर्यादित संपले. 
-    </p style=" text-align: left;">
+        <br>
+        <br>
+
+    </p >
+    <p style="text-align: center;">
       <b>
         "आज इमान बेच के इंसान खरीदने चला है मुस्कान<br>
         नियत सजा के रखना नहीं इतना आसान<br>
@@ -217,10 +163,12 @@ header
       </b>
     </p>
 
-</div>
-
-</main>
-
+              
+   
+      </div>
+    </main>
+    <!-- main ends here -->
+  </div>
 
 <!-- 
 footer
@@ -256,8 +204,6 @@ footer
     </span>
   </div>
 </footer>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
 </body>
 </html>
