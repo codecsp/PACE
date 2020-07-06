@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PACE</title>
+	<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <style>
+		
+	.dropdown:hover .dropdown-menu
+	{
+  		display: block;
+	}
+	</style>
+
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+  <script>
+
+    var cont=0;
+function loopSlider(){
+  var xx= setInterval(function(){
+        switch(cont)
+        {
+        case 0:{
+            $("#slider-1").fadeOut(400);
+            $("#slider-2").delay(400).fadeIn(400);
+            $("#sButton1").removeClass("bg-purple-800");
+            $("#sButton2").addClass("bg-purple-800");
+        cont=1;
+        
+        break;
+        }
+        case 1:
+        {
+        
+            $("#slider-2").fadeOut(400);
+            $("#slider-1").delay(400).fadeIn(400);
+            $("#sButton2").removeClass("bg-purple-800");
+            $("#sButton1").addClass("bg-purple-800");
+           
+        cont=0;
+        
+        break;
+        }
+        
+        
+        }},8000);
+
+}
+
+function reinitLoop(time){
+clearInterval(xx);
+setTimeout(loopSlider(),time);
+}
+
+
+
+function sliderButton1(){
+
+    $("#slider-2").fadeOut(400);
+    $("#slider-1").delay(400).fadeIn(400);
+    $("#sButton2").removeClass("bg-purple-800");
+    $("#sButton1").addClass("bg-purple-800");
+    reinitLoop(4000);
+    cont=0
+    
+    }
+    
+    function sliderButton2(){
+    $("#slider-1").fadeOut(400);
+    $("#slider-2").delay(400).fadeIn(400);
+    $("#sButton1").removeClass("bg-purple-800");
+    $("#sButton2").addClass("bg-purple-800");
+    reinitLoop(4000);
+    cont=1
+    
+    }
+
+    $(window).ready(function(){
+        $("#slider-2").hide();
+        $("#sButton1").addClass("bg-purple-800");
+        
+
+        loopSlider();
+     
+        
+    
+    
+    
+    
+    });
+
+  
+  </script>
+
+    
+</head>
+<body>
+<!-- 
+header
+ -->
+<header class="text-gray-700 body-font">
+  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+    <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+      </svg>
+      <span class="ml-3 text-xl">Personality Advancement circle of Engineers</span>
+    </a>
+    <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+
+      <a href="index.html" class="mr-5 hover:text-gray-900">Home</a>
+      <div class="p-0">
+		  <div class="dropdown inline-block relative">
+		    <button class="text-gray-700 py-2 px-4 rounded inline-flex items-center">
+		      <span class="mr-1">About Us</span>
+		      <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/> </svg>
+		    </button>
+		    <ul class="dropdown-menu absolute hidden text-gray-700 pt-1">
+		      <li class=""><a class="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="mentor-board.html">Mentor Board</a></li>
+		      <li class=""><a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="chief-board.html">Chief Board</a></li>
+		      <li class=""><a class="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="joint-board.html">Joint Board</a></li>
+		      <li class=""><a class="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="assistant-board.html">Assistant Board</a></li>
+		    </ul>
+		  </div>
+
+	  </div>
+	  <div class="p-0">
+		  <div class="dropdown inline-block relative">
+		    <button class="text-gray-700  py-2 px-4 rounded inline-flex items-center">
+		      <span class="mr-1">Activities</span>
+		      <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/> </svg>
+		    </button>
+		    <ul class="dropdown-menu absolute hidden text-gray-700 pt-1">
+		      <li class=""><a class="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="events.html">Events</a></li>
+		      <li class=""><a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="meet-ups.html">Meet-Ups</a></li>
+		      <li class=""><a class="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="social.html">Social Services</a></li>
+		    </ul>
+		  </div>
+
+	  </div>
+      
+      <a href="blogs.html" class="mr-5 hover:text-gray-900">Blogs </a>
+      <a href="gallery.html" class="mr-5 hover:text-gray-900">Gallery</a>
+      
+      	
+    </nav>
+
+
+  </div>
+</header>
+
+
+
+<h2 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900" align="center">ONE LAST TIME.</h2>
+<div class="blog-post">
+  
+
+<main>
+<div class="container">
+
+  <div class="blog-post">
+    <!-- <h2 class="blog-post-title" align="center">ONE LAST TIME.</h2> -->
+    
+    <hr>
+    <p style=" text-indent: 50px; font-size:18px;" >  I entered the ICU with a handmade "Get Well Soon" card. 
+        Maybe, the medicines hadmade her feel drowsy. 
+        I shook her shoulder and she seemed to have forced herself to open hereyes for a while.
+        No sooner did Ajji (Grandma) recognise me,
+        I saw a spark in her eyes and asparkle in her smile. 
+        I handed the card towards her and in no time felt the tears in her eyes,
+        hitright at my heart. I comforted her, 
+        said that she would be fine and that we all are with her.
+        Shesmiled at me and said "I know and God bless you.
+        You were always my choti and Im sorry if Ihurt you in anyway.Do what u love and find time to love others too. 
+        Unfortunately, no one comeswith an expiry date to show, 
+        you might never know and then you might never find a chance totalk to them too."
+    </p>
+    
+    <p style=" text-indent: 50px; font-size:18px;" >
+      I felt numb, completely numb,numb enough to not be able to express myself in words,not because I didn't know these things,but I had never seen her so fragile,exhausted and broken.How can illness change someone so much?How can illness force an optimistic person to completely give up on life? Before I could process anything the nurse asked me to leave the room. While the nurse fed Ajji, I sat beside my mumma sobbing. I asked her if Ajji would be okay. My mumma had no answers though. And since then, nothing seemed right. I didn't sleep that night.The childhood flashbacks kept rushing and hitting my mind all night. Isn't it strange? Sometimes it's the "memories" that don't let you sleep.They are relative. Sometimes they help you get through the worst times, the other times they don't even let your mind function properly.
+    </p>
+
+    <p style=" text-indent: 50px; font-size:18px;" >
+      And the very next day,she was no more. Nothing could have shocked me more but this. It felt like someone squeezed my throat,freezed my brain,choked my mind and broke my heart. Was I a good granddaughter? Did I spend enough time with her? Did I love her the way she loved me? Did I look in her eyes the same way I used to when I was a child? Did I look as happy as I used to be in childhood whenever she used to gift me with wonderful gifts? I had no
+
+answers.The one who could answer these was no more with me. Technically, it was just a "body" , with no soul, no identity.
+    </p>
+    <p style=" text-indent: 50px; font-size:18px;" >
+      But everything changed since then.Its been 3 yrs since her demise, but still, anything I do, reminds me of her. She has left her fragrance behind. Or maybe she has left the fragrance of our memories together behind in small things ,like the perfume she used to wear, even the hair oil reminds me of her plating my hair in my school days. She left me her watch and I remember her saying then,
+
+    </p>
+    <p style=" text-indent: 50px; font-size:18px;" >
+      "The only person who's going to stay with you until your last breath is you. No matter how pissed-off you feel about the way you are, never be ungrateful towards it.You go through a lot of things,and by you I mean each and every cell of your body. Love yourself. Never doubt yourself. " That really hits me everytime.
+    </p>
+
+    <p style=" text-indent: 50px; font-size:18px;" >
+      She was like an open book for me.She had all the simple lessons with wonderful stories. Her last words have touched me enough to love my people before it's too late.We often get so busy growing up,that we forget that they are growing old too. My Ajji's empty chair reminds me of the value of presence of a soul. Be someone who lives a footprint in today's selfish world. Be kind to the unkind people, they are the ones who need it the most. And that's what my Ajji did her whole life. She loved everyone,helped everyone,but unfortunately, forgot to love "her self".
+    </p>
+    <p style=" text-indent: 50px; font-size:18px;" >
+      I wish I could tell my Ajji how beautiful, strong and inspirational she was. Because that's what she taught everyone,forgetting to do the same for herself. I wish I could hug my Ajji tight enough to make her impossible to leave this world. I wish I could tell my Ajji that I have always loved her, one last time.One last time.
+    </p>
+
+</div>
+
+</main>
+
+
+<!-- 
+footer
+ -->
+<footer class="text-gray-700 body-font">
+  <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+    <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+      </svg>
+      <span class="ml-3 text-xl">Personality Advancement circle of Engineers</span>
+    </a>
+    <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2020 Personality Advancement circle of Engineers
+    </p>
+    <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+      <a href="https://www.facebook.com/wcepace/" class="text-gray-500">
+        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+          <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+        </svg>
+      </a>
+      <a href="https://www.instagram.com/wcepace/" class="ml-3 text-gray-500">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+          <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+          <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+        </svg>
+      </a>
+      <a  href="https://www.linkedin.com/company/personality-advancement-circle-of-engineers/" class="ml-3 text-gray-500">
+        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+          <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+          <circle cx="4" cy="4" r="2" stroke="none"></circle>
+        </svg>
+      </a>
+    </span>
+  </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>

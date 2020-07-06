@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PACE</title>
+	<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <style>
+		
+	.dropdown:hover .dropdown-menu
+	{
+  		display: block;
+	}
+	</style>
+
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+  <script>
+
+    var cont=0;
+function loopSlider(){
+  var xx= setInterval(function(){
+        switch(cont)
+        {
+        case 0:{
+            $("#slider-1").fadeOut(400);
+            $("#slider-2").delay(400).fadeIn(400);
+            $("#sButton1").removeClass("bg-purple-800");
+            $("#sButton2").addClass("bg-purple-800");
+        cont=1;
+        
+        break;
+        }
+        case 1:
+        {
+        
+            $("#slider-2").fadeOut(400);
+            $("#slider-1").delay(400).fadeIn(400);
+            $("#sButton2").removeClass("bg-purple-800");
+            $("#sButton1").addClass("bg-purple-800");
+           
+        cont=0;
+        
+        break;
+        }
+        
+        
+        }},8000);
+
+}
+
+function reinitLoop(time){
+clearInterval(xx);
+setTimeout(loopSlider(),time);
+}
+
+
+
+function sliderButton1(){
+
+    $("#slider-2").fadeOut(400);
+    $("#slider-1").delay(400).fadeIn(400);
+    $("#sButton2").removeClass("bg-purple-800");
+    $("#sButton1").addClass("bg-purple-800");
+    reinitLoop(4000);
+    cont=0
+    
+    }
+    
+    function sliderButton2(){
+    $("#slider-1").fadeOut(400);
+    $("#slider-2").delay(400).fadeIn(400);
+    $("#sButton1").removeClass("bg-purple-800");
+    $("#sButton2").addClass("bg-purple-800");
+    reinitLoop(4000);
+    cont=1
+    
+    }
+
+    $(window).ready(function(){
+        $("#slider-2").hide();
+        $("#sButton1").addClass("bg-purple-800");
+        
+
+        loopSlider();
+     
+        
+    
+    
+    
+    
+    });
+
+  
+  </script>
+
+    
+</head>
+<body>
+<!-- 
+header
+ -->
+<header class="text-gray-700 body-font">
+  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+    <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+      </svg>
+      <span class="ml-3 text-xl">Personality Advancement circle of Engineers</span>
+    </a>
+    <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+
+      <a href="index.html" class="mr-5 hover:text-gray-900">Home</a>
+      <div class="p-0">
+		  <div class="dropdown inline-block relative">
+		    <button class="text-gray-700 py-2 px-4 rounded inline-flex items-center">
+		      <span class="mr-1">About Us</span>
+		      <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/> </svg>
+		    </button>
+		    <ul class="dropdown-menu absolute hidden text-gray-700 pt-1">
+		      <li class=""><a class="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="mentor-board.html">Mentor Board</a></li>
+		      <li class=""><a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="chief-board.html">Chief Board</a></li>
+		      <li class=""><a class="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="joint-board.html">Joint Board</a></li>
+		      <li class=""><a class="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="assistant-board.html">Assistant Board</a></li>
+		    </ul>
+		  </div>
+
+	  </div>
+	  <div class="p-0">
+		  <div class="dropdown inline-block relative">
+		    <button class="text-gray-700  py-2 px-4 rounded inline-flex items-center">
+		      <span class="mr-1">Activities</span>
+		      <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/> </svg>
+		    </button>
+		    <ul class="dropdown-menu absolute hidden text-gray-700 pt-1">
+		      <li class=""><a class="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="events.html">Events</a></li>
+		      <li class=""><a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="meet-ups.html">Meet-Ups</a></li>
+		      <li class=""><a class="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="social.html">Social Services</a></li>
+		    </ul>
+		  </div>
+
+	  </div>
+      
+      <a href="blogs.html" class="mr-5 hover:text-gray-900">Blogs </a>
+      <a href="gallery.html" class="mr-5 hover:text-gray-900">Gallery</a>
+      
+      	
+    </nav>
+
+
+  </div>
+</header>
+
+
+
+<h2 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900" align="center">माणूसकीच हरवत चाललयं.</h2>
+<div class="blog-post">
+  
+
+<main>
+<div class="container">
+
+  <div class="blog-post">
+    <!-- <h2 class="blog-post-title" align="center">ONE LAST TIME.</h2> -->
+    
+    <hr>
+    <p style=" text-indent: 50px; font-size:16px;" > 
+      आजच मानवी जीवन यांच्या सुसाट त्याने धावत चाललंय, आशा-अपेक्षांच्या या रातीत कुठेतरी माणूसकीच हरवत चाललीयं. आज माणसाला माणसाशीच बोलण्यासाठी वेळ मिळत नाही, आपल्याला घरा शेजारी कोण राहते हे त्याला माहित नाही हातातला काळ एवढ्या झपाट्याने बदलतोय,तेवढयाच झपाट्याने माणूस बोलतो, म्हणून कधी कधी ते बदलत विज्ञान धान की वरदान' असा प्रश्न पडतो. 
+      जसाजसा पैसा मोठा होतो तसानसा माणूसही बदलतो, प्रोट्घा प्रतिज्हे साठी, आज संवेदनांनाही मर बाजारात गिलाम करतोय
+    </p>
+    <p style=" text-indent: 50px; font-size:16px;" >
+        
+गरजा पूर्ण करण्याच्या हेतूने, पैशाच्या मागे धाव-धाव धावतो, पण गरजा तर की पूर्ण होत्व नाहीत हे तो विसरतो. पूर्वीचा मानव अगदी होता,कारण तो मोबाईल मध्ये नाही तर स्वत मध्ये हरवत होता, कोणत्या दगडान नाही तर जिवंत माणसात देव शोधत होता.खरं घड्याळ प्रमाणे माणसाचे आयुष्य सरत चाललय आणि 'स्पीड लिमिट' नराणा क्या स्वप्नपूर्ती गाठी धावण्याच्या शर्यतीत चिमूरडघंवर संस्काराची नांदी करण राहून गेलय. मोठी स्वप्न पूर्ण करण्याच्या नादात छोट्या-छोट्या गोष्टींमयून मिळणारा आनंद होणे सो विसरून चाललंय
+    </p>
+    <p style=" text-indent: 50px; font-size:16px;" >
+    
+        <b>"आज बदलत आहे जग सारे,कोणी उरले नाही कोणाचे स्वार्टी बनत चाललेत चेहरे , वटित कुठेतरी आपलेपण हरवले "</b> ज्यांनी शिकवले बोर हारून चालायला, सुखडुजात सोक्त करायला त्या आईला जा सारे विसरले, क्षणभराची विचार न करता त्याना उपड्यावर सोडून मुवी संसारात व्यस्त आहे  
+    </p>
+
+    <p style=" text-indent: 50px; font-size:16px;" >
+      <b>"देख तेरे संसार की तथा हालत हो गयी भगवान जो तत्व के साथ इतना बदल गया ये इंसान"</b>
+      
+        आशी वेळ आज माणसाने आणली असं जर आर्य चालत राहिल तर, रोगाच्या काळात माणुसकीचा लवलेशही उरणार नाही.खत च्या सु्वच्या पलीकडे जगच संपलय असा गैरसमजया समाजात पसरायला राहील वक लागणार नाही. कारण आज कुटुंब, समाधान आणि सुथ या गोष्टी तर फक्त कल्पनेपुरत्याय मर्यादित हो लागलेल्या प्रत्येक मेमरी फवन कॅमेऱ्यातच कैद होत आहे सेल्फीच्या या युगात माणस क्षण जगणे विसरून गेला,
+    </p>
+    <p style=" text-indent: 50px; font-size:16px;" >
+      <b>"माणसातली माणूसकी आज लग्न आहे अमाप पैसा असूनही,आपुलकी मान विकत आहे"</b>
+      समाजातली ही उणीव अन काढणथामाडी, काही क्विारविनिमय होण ही काळाची गरज आहे, प्रगती बरोबरच माणूसकी जपण ही गरजेच आहे. पाज स्वामी बन चाललाय माणसं, काळ बदलला माणुसकीचा
+      <b> "हल्ली आकाशातला चंद्र ही उदास वाटतो.माणसाच्या गर्दीतला एकटेपणा कदाचित त्याला मानतो"</b>
+      
+        खरंच या हरवत चाललेल्या माणूस काळशेखर प्रेम, आपुलकी, जिव्हाळा, नाजी या सवतीच आकृती दिली जात आहे म्हणून जग बदलणे ही काळाऱ्ची गरज माहे पण माणसातील माणुसकी टिकवण आज मानवाच्या कल्याणासाठी गरजेचे आहे.
+    </p>
+    <p style=" text-indent: 50px; font-size:16px;" >
+      खरंतर इतर गेटने माणसं ऑनलाइन जोडली पण जवळची नाती मात्र दुरावली खवरोवस्वं माणसं व माणुसकी हरवली.
+      <b>"आज माणसाच्या शर्ट माणूसकी शोधतो, सापडतात पाऊलखुणा काही जतन दूर दूर जाताना"</b>
+    </p>
+    <p style=" text-indent: 50px; font-size:16px;" >
+      
+      आता सगळ जग ग्लोबल झालं जगण्याल्याही वेगल वळण आलय, सगळीकडे चालू आहे ती तुफान स्पर्धा, यांना तो संपला या गलतयाल माणूस मात्र हरवला. पैशाच्या मोहासाठी नातेसंबंधही विसरला.
+      <br>
+      </p>
+      <p>
+      <b>
+        
+        " पैशाची जादू लई न्यारी, तान्ह्या पोराला त्याची हाव.<br>
+          आई सोइन घेत झेप पैशाच्या मारून द्या..<br>
+          जन्मापासून सारी माणसं या पैशाची गुलाम रे.<br>
+          दाम करी काम वेड्या दाम करी काम..."<br>
+      </b>
+    </p>
+    <p style=" text-indent: 50px; font-size:18px;" >
+      
+        या काव्यपवलीत सरोवस्व अगदी अनूक वर्णन केल डाहे से माणसाच्या व समाजाच्या स्वभाव गुण. आज काळाच्या धान कुठेतरी संस्कार हरवलेत, घडण्याच्या कात्यावर चालणार्या जीवनशैलीने माणसाकइन मनमुरादपणे, आणि मोकळेपणाने जगणेच हिरावले अमर्यादित मिळविण्याच्या शर्यत, मर्यादित संपले. 
+    </p style=" text-align: left;">
+      <b>
+        "आज इमान बेच के इंसान खरीदने चला है मुस्कान<br>
+        नियत सजा के रखना नहीं इतना आसान<br>
+        अपनी कुछ बनावटी पे शर्मिंदा होगा, तो भगवान<br>
+        जो वतन के साथ इतना बदल गया है इंसान."<br>
+      </b>
+    </p>
+
+</div>
+
+</main>
+
+
+<!-- 
+footer
+ -->
+<footer class="text-gray-700 body-font">
+  <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+    <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+      </svg>
+      <span class="ml-3 text-xl">Personality Advancement circle of Engineers</span>
+    </a>
+    <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2020 Personality Advancement circle of Engineers
+    </p>
+    <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+      <a href="https://www.facebook.com/wcepace/" class="text-gray-500">
+        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+          <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+        </svg>
+      </a>
+      <a href="https://www.instagram.com/wcepace/" class="ml-3 text-gray-500">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+          <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+          <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+        </svg>
+      </a>
+      <a  href="https://www.linkedin.com/company/personality-advancement-circle-of-engineers/" class="ml-3 text-gray-500">
+        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+          <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+          <circle cx="4" cy="4" r="2" stroke="none"></circle>
+        </svg>
+      </a>
+    </span>
+  </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>
