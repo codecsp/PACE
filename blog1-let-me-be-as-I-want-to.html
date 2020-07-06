@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PACE</title>
+	<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+	<style>
+		
+	.dropdown:hover .dropdown-menu
+	{
+  		display: block;
+	}
+	</style>
+
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+  <script>
+    var cont=0;
+function loopSlider(){
+  var xx= setInterval(function(){
+        switch(cont)
+        {
+        case 0:{
+            $("#slider-1").fadeOut(400);
+            $("#slider-2").delay(400).fadeIn(400);
+            $("#sButton1").removeClass("bg-purple-800");
+            $("#sButton2").addClass("bg-purple-800");
+        cont=1;
+        
+        break;
+        }
+        case 1:
+        {
+        
+            $("#slider-2").fadeOut(400);
+            $("#slider-1").delay(400).fadeIn(400);
+            $("#sButton2").removeClass("bg-purple-800");
+            $("#sButton1").addClass("bg-purple-800");
+           
+        cont=0;
+        
+        break;
+        }
+        
+        
+        }},8000);
+
+}
+
+function reinitLoop(time){
+clearInterval(xx);
+setTimeout(loopSlider(),time);
+}
+
+
+
+function sliderButton1(){
+
+    $("#slider-2").fadeOut(400);
+    $("#slider-1").delay(400).fadeIn(400);
+    $("#sButton2").removeClass("bg-purple-800");
+    $("#sButton1").addClass("bg-purple-800");
+    reinitLoop(4000);
+    cont=0
+    
+    }
+    
+    function sliderButton2(){
+    $("#slider-1").fadeOut(400);
+    $("#slider-2").delay(400).fadeIn(400);
+    $("#sButton1").removeClass("bg-purple-800");
+    $("#sButton2").addClass("bg-purple-800");
+    reinitLoop(4000);
+    cont=1
+    
+    }
+
+    $(window).ready(function(){
+        $("#slider-2").hide();
+        $("#sButton1").addClass("bg-purple-800");
+        
+
+        loopSlider();
+     
+        
+    
+    
+    
+    
+    });
+
+  
+  </script>
+
+    
+</head>
+<body>
+<!-- 
+header
+ -->
+<header class="text-gray-700 body-font">
+  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+    <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+      </svg>
+      <span class="ml-3 text-xl">Personality Advancement circle of Engineers</span>
+    </a>
+    <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+
+      <a href="index.html" class="mr-5 hover:text-gray-900">Home</a>
+      <div class="p-0">
+		  <div class="dropdown inline-block relative">
+		    <button class="text-gray-700 py-2 px-4 rounded inline-flex items-center">
+		      <span class="mr-1">About Us</span>
+		      <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/> </svg>
+		    </button>
+		    <ul class="dropdown-menu absolute hidden text-gray-700 pt-1">
+		      <li class=""><a class="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="mentor-board.html">Mentor Board</a></li>
+		      <li class=""><a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="chief-board.html">Chief Board</a></li>
+		      <li class=""><a class="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="joint-board.html">Joint Board</a></li>
+		      <li class=""><a class="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="assistant-board.html">Assistant Board</a></li>
+		    </ul>
+		  </div>
+
+	  </div>
+	  <div class="p-0">
+		  <div class="dropdown inline-block relative">
+		    <button class="text-gray-700  py-2 px-4 rounded inline-flex items-center">
+		      <span class="mr-1">Activities</span>
+		      <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/> </svg>
+		    </button>
+		    <ul class="dropdown-menu absolute hidden text-gray-700 pt-1">
+		      <li class=""><a class="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="events.html">Events</a></li>
+		      <li class=""><a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="meet-ups.html">Meet-Ups</a></li>
+		      <li class=""><a class="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="social.html">Social Services</a></li>
+		    </ul>
+		  </div>
+
+	  </div>
+      
+      <a href="blogs.html" class="mr-5 hover:text-gray-900">Blogs </a>
+      <a href="gallery.html" class="mr-5 hover:text-gray-900">Gallery</a>
+      
+      	
+    </nav>
+
+
+  </div>
+</header>
+<br><br>
+<!--content-->
+<h2 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900" align="center">LET ME BE AS I WANT TO</h2>
+<br>
+<!-- <h1 ></h1><br> -->
+<div class="container">
+  
+</div>
+
+<p class="title-font sm:text-2xl text-1xl mb-4 font-medium text-gray-800" align="center">
+
+    
+   I can get betrayed, but I cannot betray,<br>
+   He can drink and get me deserted, but I cannot drink,<br>
+   He can use coarse words, but if I use it’s scurrility,<br>
+   He can be a carouser,<br>
+   But if I’m the one <br>
+   I seem to drown my dynasty.<br>
+   LET ME BE AS I WANT TO.<br>
+   I am discerned by the society<br>
+   for the curves of my body,<br>
+   for the coolness of my being,<br>
+   for the pudgy of my body,<br>
+   for the length of my skirt,<br>
+   for being assertive at my work,<br>
+   LET ME BE AS I WANT TO.<br>
+   <br>
+   Men who sleep around multiple are studs,<br>
+   but women who do the same are sluts,<br>
+   Judge me not by appearance,<br>
+   I came to Earth as I am.<br>
+   I am barred from wearing skirts,<br>
+   Because legs are bare.<br>
+   Men who sing, dance are artists,<br>
+   grabbing their passion.<br>
+   Women who sing and dance are<br>
+   Unproductive,<br>
+   nugatory<br>
+   and groundless.<br>
+   LET ME BE AS I WANT TO.<br>
+   <br>
+   I’m not a saint,<br>
+   Neither are you<br>
+   I Am not an angel,<br>
+   but in gods eyes I am.<br>
+   I’ve made mistakes,<br>
+   so did you<br>
+   I’ve made bad choices,<br>
+   just like you.<br>
+   My mistakes don’t determine my forthcoming.<br>
+   M not perfect, same as you.<br>
+   LET ME BE AS I WANT TO.<br>
+   <br>
+   I can experiment<br>
+   I can go to solo-trips<br>
+   I can party late night<br>
+   I can have hair on my body<br>
+   I can have multiple relations<br>
+   I can show my colour with any shade<br>
+   LET ME BE AS I WANT TO.<br>
+   <br>
+   Glass ceiling may be shattered,<br>
+   But women still face obstacles.<br>
+   May her reach to miles,<br>
+   but you won’t stop pulling her down.<br>
+   And I won’t allow you,<br>
+   Letting me live as you desire.<br>
+   I am phenomenal and I will be phenomenal<br>
+   I WILL BE AS I WANT TO.<br>
+</p>
+
+
+
+
+
+
+
+
+
+<!-- footer-->
+<footer class="text-gray-700 body-font">
+  <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+    <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+      </svg>
+      <span class="ml-3 text-xl">Personality Advancement circle of Engineers</span>
+    </a>
+    <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2020 Personality Advancement circle of Engineers
+    </p>
+    <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+      <a href="https://www.facebook.com/wcepace/" class="text-gray-500">
+        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+          <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+        </svg>
+      </a>
+      <a href="https://www.instagram.com/wcepace/" class="ml-3 text-gray-500">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+          <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+          <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+        </svg>
+      </a>
+      <a  href="https://www.linkedin.com/company/personality-advancement-circle-of-engineers/" class="ml-3 text-gray-500">
+        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+          <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+          <circle cx="4" cy="4" r="2" stroke="none"></circle>
+        </svg>
+      </a>
+    </span>
+  </div>
+
+  <br><br>
+</footer>
+
+</body>
+</html>
